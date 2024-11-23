@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ja">
       <body
         className={cn(
-          "bg-background antialiased min-h-screen"
+          "bg-background antialiased min-h-screen px-8"
           ,fontNotoSansJP.className)}>
       {children}</body>
     </html>

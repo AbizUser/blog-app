@@ -1,13 +1,15 @@
+"use client"
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export default function IndexPage() {
+
   return (
     <>
         <section className="pt-6 md:pt-10 lg:py-32 pb-8 md:pb-12">
-          <div className="container text-center flex flex-col items-center gap-4 max-w-[64rem]">
+          <div className="container text-center flex flex-col items-center gap-4 ">
             <Link
               href="/" 
               className="bg-muted px-4 py-1.5 rounded-2xl font-medium text-sm"
@@ -135,23 +137,44 @@ export default function IndexPage() {
             </div>
             <div className="bg-background border p-2 rounded-lg">
               <div className="flex flex-col justify-center p-6 h-[180px]">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="45"
-                    height="45"
-                    viewBox="0 0 15 15">
-                    <path fill="currentColor" d="m4.5 4.5l.405-.293A.5.5 0 0 0 4 4.5h.5Zm3 9.5A6.5 6.5 0 0 1 1 7.5H0A7.5 7.5 0 0 0 7.5 15v-1ZM14 7.5A6.5 6.5 0 0 1 7.5 14v1A7.5 7.5 0 0 0 15 7.5h-1ZM7.5 1A6.5 6.5 0 0 1 14 7.5h1A7.5 7.5 0 0 0 7.5 0v1Zm0-1A7.5 7.5 0 0 0 0 7.5h1A6.5 6.5 0 0 1 7.5 1V0ZM5 12V4.5H4V12h1Zm-.905-7.207l6.5 9l.81-.586l-6.5-9l-.81.586ZM10 4v6h1V4h-1Z"/>
-                  </svg>
-                  <div className="space-y-2">
-                    <h3 className="font-bold">Next.js14</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Next.jsのAPIを使用して…
-                    </p>
-                  </div>
-              </div>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="45"
+                  height="45"
+                  viewBox="0 0 15 15">
+                  <path fill="currentColor" d="m4.5 4.5l.405-.293A.5.5 0 0 0 4 4.5h.5Zm3 9.5A6.5 6.5 0 0 1 1 7.5H0A7.5 7.5 0 0 0 7.5 15v-1ZM14 7.5A6.5 6.5 0 0 1 7.5 14v1A7.5 7.5 0 0 0 15 7.5h-1ZM7.5 1A6.5 6.5 0 0 1 14 7.5h1A7.5 7.5 0 0 0 7.5 0v1Zm0-1A7.5 7.5 0 0 0 0 7.5h1A6.5 6.5 0 0 1 7.5 1V0ZM5 12V4.5H4V12h1Zm-.905-7.207l6.5 9l.81-.586l-6.5-9l-.81.586ZM10 4v6h1V4h-1Z"/>
+                </svg>
+                <div className="space-y-2">
+                  <h3 className="font-bold">Next.js14</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Next.jsのAPIを使用して…
+                  </p>
+                </div>
+            </div>
+
             </div>
           </div>
-          
+            <div className="mx-auto md:max-w-[58rem] text-center">
+                <p className="text-muted-foreground sm:text-lg sm:leading-7">Post Writerはログインするとブログ投稿ができるようになります。</p>
+            </div>
+      </section>
+
+      <section id="contact" className="container py-8 md:py-8 lg:py-24">
+        <div className="max-w-[58] mx-auto text-center flex flex-col gap-4">
+          <h2 className="font-extrabold text-3xl md-6xl">Contact Me</h2>
+          <p className="text-muted-foreground sm:text-lg sm:leading-7">模試もブログが気に入ったら
+          <br />
+          お仕事のご連絡をお待ちしております。
+          </p>
+          <Link 
+            href={siteConfig.links.x}
+            className="underline underline-offset-4"
+            target="_brank"
+            rel="noreferrer"
+          >
+            お仕事はXまで
+          </Link>
+        </div>
       </section>
     </>
   );
